@@ -1,0 +1,499 @@
+:root {
+    --fonte-principal: 'Montserrat';
+    --verde: #8DE02C;
+    --laranja:#F9CA3F;
+    --vermelho: #FF0000;
+    --azul: #3D9CF3;
+    --fundo-pesquisa: #fcfcfc;
+    --cinza:#e3e3e3;
+    --background: #F5F5F5;
+    --card:#FAFAFA;
+    --preto: #000000;
+    --fonte-preta2:#7D7D7D;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--fonte-principal);
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-color: var(--background);
+}
+
+.container {
+    position: relative;
+    width: 100%;
+}
+
+.navegacao {
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    background: var(--azul);
+    border-left: 10px solid var(--azul);
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.navegacao.Ativo {
+    width: 80px;
+}
+
+.navegacao ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.navegacao ul li {
+    position: relative;
+    width: 100%;
+    list-style: none;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.navegacao ul li:hover, 
+.navegacao ul li .PorCima {
+    background: var(--background);
+}
+
+.navegacao ul li:nth-child(1) {
+    margin-bottom: 40px;
+    pointer-events: none;
+}
+
+.navegacao ul li a {
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: var(--background);
+}
+
+.navegacao ul li:hover a, 
+.navegacao ul li .PorCima a {
+    color: var(--azul);
+}
+
+.navegacao ul li a .icon {
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 70px;
+    text-align: center;
+}
+
+.navegacao ul li a .icon img {
+    margin-top: 10px;
+}
+
+.navegacao ul li a .icon ion-icon {
+    font-size: 1.75em;
+}
+
+.navegacao ul li a .title {
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 60px;
+    line-height: 60px;
+    text-align: start;
+    white-space: nowrap;
+}
+
+.navegacao ul li:hover a::before,
+.navegacao ul li .PorCima a::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: -50px;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: 35px 35px 0 10px var(--background);
+    pointer-events: none;
+}
+
+.navegacao ul li:hover a::after,
+.navegacao ul li .PorCima a::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -50px;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: 35px -35px 0 10px var(--background);
+    pointer-events: none;
+}
+
+/* Menu */
+
+.menu {
+    position: absolute;
+    width: calc(100% - 300px);
+    left: 300px;
+    min-height: 100vh;
+    background: var(--background);
+    transition: 0.5s;
+}
+
+.menu.Ativo {
+    width: calc(100% - 80px);
+    left: 80px;
+}
+
+.menu-superior {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.alternar {
+    position: relative;
+    top: 0;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5em;
+    cursor: pointer;
+}
+
+.pesquisar {
+    position: relative;
+    width: 400px;
+    margin: 0 10px;
+}
+
+.pesquisar label {
+    position: relative;
+    width: 100%;
+}
+
+.pesquisar label input {
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    padding: 5px 20px;
+    padding-left: 35px;
+    font-size: 18px;
+    outline: none;
+    border: 1px solid var(--cinza)
+}
+
+.pesquisar label ion-icon {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    font-size: 1.2em;
+}
+
+.usuario {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.usuario img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card__container {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+}
+
+.card__container .card {
+    position: relative;
+    background: var(--background);
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, .08);
+}
+
+.card__container .card .card__numero {
+    position: relative;
+    font-weight: 500;
+    font-size: 2.5em;
+    color: var(--azul);
+}
+
+.card__container .card .card__titulo {
+    color: var(--fonte-preta2);
+    font-size: 1.1em;
+    margin-top: 5px;
+}
+
+.card__container .card .card__imagem {
+    font-size: 3.5em;
+    color: var(--fonte-preta2);
+}
+
+.card__container .card:hover {
+    background: var(--azul);
+}
+
+.card__container .card:hover .card__numero,
+.card__container .card:hover .card__titulo ,
+.card__container .card:hover .card__imagem {
+    color: var(--background);
+}
+
+.relatorio {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 30px;
+}
+
+.relatorio .compra {
+    position: relative;
+    display: grid;
+    min-height: 500px; 
+    background: var(--background);
+    padding: 20px;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, .08);
+    border-radius: 20px;
+}
+
+.cabecalho__card {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.cabecalho__card h2 {
+    font-weight: 700;
+    color: var(--azul);
+}
+
+.botao {
+    position: relative;
+    padding: 5px 10px;
+    background: var(--azul);
+    text-decoration: none;
+    color: var(--background);
+    border-radius: 6px;
+}
+
+.relatorio table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.relatorio table thead td {
+    font-weight: 700;
+}
+
+.relatorio .compra table tr {
+    color: var(--preto);
+}
+
+.relatorio .compra table tbody tr:hover {
+    background: var(--azul);
+    color: var(--background);
+}
+
+.relatorio .compra table tr td {
+    padding: 10px;
+}
+
+.relatorio .compra table tr td:last-child {
+    text-align: end;
+}
+
+.relatorio .compra table tr td:nth-child(2) {
+    text-align: center;
+}
+
+.relatorio .compra table tr td:nth-child(3) {
+    text-align: center;
+}
+
+.status.entregue {
+    padding: 2px 4px;
+    background: var(--verde);
+    color: var(--background);
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.status.pendente {
+    padding: 2px 4px;
+    background: var(--laranja);
+    color: var(--background);
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.status.estornado {
+    padding: 2px 4px;
+    background: var(--vermelho);
+    color: var(--background);
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.status.processando {
+    padding: 2px 4px;
+    background: var(--azul);
+    color: var(--background);
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.cliente {
+    position: relative;
+    display: grid;
+    min-height: 500px;
+    padding: 20px;
+    background: var(--background);
+    box-shadow: 0 7px 25px rgba(0, 0, 0, .08);
+    border-radius: 20px;
+}
+
+.cliente .imagem__card {
+ position: relative;
+ width: 40px;
+ height: 40px;
+}
+
+.cliente .imagem__card img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cliente table tr:hover {
+    background: var(--azul);
+    color: var(--background);
+}
+
+.cliente table tr td {
+    padding: 12px 10px;
+}
+
+.cliente table tr td h4 {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.2em;
+}
+
+.cliente table tr td span {
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--fonte-preta2);
+}
+
+.cliente table tr:hover td span {
+    color: var(--cinza);
+}
+
+@media screen and (max-width: 991px) {
+    .navegacao {
+        left: -300px;
+    }
+
+    .navegacao.Ativo {
+        width: 300px;
+        left: 0;
+    }
+
+    .menu {
+        width: 100%;
+        left: 0;
+    }
+
+    .menu.Ativo {
+        left: 300px;
+    }
+
+    .card__container {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .relatorio {
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .cliente {
+        overflow-x: auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .card__container {
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .cabecalho__card h2 {
+        font-size: 20px;
+    }
+
+    .usuario {
+        min-width: 40px;
+    }
+
+    .navegacao {
+        width: 100%;
+        left: -100%;
+        z-index: 1000;
+    }
+
+    .navegacao.Ativo {
+        width: 100%;
+        left: 0;
+    }
+
+    .alternar {
+        z-index: 10001;
+    }
+
+    .menu.Ativo .alternar {
+        position: fixed;
+        right: 0;
+        left: initial;
+        color: var(--background);
+    }
+}

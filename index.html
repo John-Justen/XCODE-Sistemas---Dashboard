@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XCODE Sistemas | Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&amp;display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="navegacao">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="icon"><img src="./img/logotipo.svg" alt="logotipo da XCODE Sistemas" class="logo"></span>
+                        <span class="title">XCODE Sistemas</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                        <span class="title">Painel</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+                        <span class="title">Clientes</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="chatbubble-outline"></ion-icon></span>
+                        <span class="title">Mensagens</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="help-circle-outline"></ion-icon></span>
+                        <span class="title">Ajuda</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="settings-outline"></ion-icon></span>
+                        <span class="title">Configurações</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                        <span class="title">Senha</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="log-out-outline"></ion-icon></span>
+                        <span class="title">Sair</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- menu -->
+    <div class="menu">
+        <div class="menu-superior">
+            <div class="alternar">
+                <ion-icon name="menu-outline"></ion-icon>
+            </div>
+    <!-- barra de pesquisa -->
+            <div class="pesquisar">
+                <label>
+                    <input type="text" placeholder="O que você procura?">
+                    <ion-icon name="search-outline"></ion-icon>
+                </label>
+            </div>
+    <!-- perfil do usuario -->
+            <div class="usuario">
+                <img src="./img/usuario_cinza.svg" alt="logo usuario">
+            </div>           
+        </div>
+    <!-- lista de cards -->
+        <div class="card__container">
+            <div class="card">
+                <div>
+                    <div class="card__numero">450</div>
+                    <div class="card__titulo">Acessos</div>
+                </div>
+                <div class="card__imagem">
+                    <ion-icon name="eye-outline"></ion-icon>
+                </div>
+            </div>
+            <div class="card">
+                <div>
+                    <div class="card__numero">15</div>
+                    <div class="card__titulo">Vendas</div>
+                </div>
+                <div class="card__imagem">
+                    <ion-icon name="bag-outline"></ion-icon>
+                </div>
+            </div>
+            <div class="card">
+                <div>
+                    <div class="card__numero">60</div>
+                    <div class="card__titulo">Mensagens</div>
+                </div>
+                <div class="card__imagem">
+                    <ion-icon name="chatbubbles-outline"></ion-icon>
+                </div>
+            </div>
+            <div class="card">
+                <div>
+                    <div class="card__numero">1.154,54</div>
+                    <div class="card__titulo">Ganhos</div>
+                </div>
+                <div class="card__imagem">
+                    <ion-icon name="trending-up-outline"></ion-icon>
+                </div>
+            </div>
+        </div>
+
+        <div class="relatorio">
+    <!-- relatorio de compras -->
+            <div class="compra">
+                <div class="cabecalho__card">
+                    <h2>Relatórios de Compras</h2>
+                    <a href="#" class="botao">Ver todos</a>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <td>Nome</td>
+                            <td>Valor</td>
+                            <td>Pagamento</td>
+                            <td>Status</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Smart TV OLED 55" LG</td>
+                            <td>R$ 150,00</td>
+                            <td>Pago</td>
+                            <td><span class="status entregue">Entregue</span></td>
+                        </tr>
+                        <tr>
+                            <td>Mouse Gamer Óptico USB</td>
+                            <td>R$ 450,00</td>
+                            <td>Vencido</td>
+                            <td><span class="status pendente">Pendente</span></td>
+                        </tr>
+                        <tr>
+                            <td>WebCam Logitech 3 MP</td>
+                            <td>R$ 50,00</td>
+                            <td>Pago</td>
+                            <td><span class="status estornado">Estornado</span></td>
+                        </tr>
+                        <tr>
+                            <td>Teclado Gamer Hyperx Alloy</td>
+                            <td>R$ 550,45</td>
+                            <td>Pago</td>
+                            <td><span class="status processando">Processando</span></td>
+                        </tr>
+                        <tr>
+                            <td>Monitor IPS 29 " LG Full HD</td>
+                            <td>R$ 180,01</td>
+                            <td>Pago</td>
+                            <td><span class="status processando">Processando</span></td>
+                        </tr>
+                        <tr>
+                            <td>Mesa Gamer Original</td>
+                            <td>R$ 258,45</td>
+                            <td>Vencido</td>
+                            <td><span class="status estornado">Estornado</span></td>
+                        </tr>
+                        <tr>
+                            <td>Cadeira gamer: ThunderX3 TGC12</td>
+                            <td>R$ 350,41</td>
+                            <td>Pago</td>
+                            <td><span class="status entregue">Entregue</span></td>
+                        </tr>
+                        <tr>
+                            <td>PC Dell XPS-8940 Intel Core i7 10700</td>
+                            <td>R$ 750,54</td>
+                            <td>Vencido</td>
+                            <td><span class="status pendente">Pendente</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+    <!-- lista de relatorios -->
+            <div class="cliente">
+                <div class="cabecalho__card">
+                    <h2>Clientes recentes</h2>
+                </div>
+                <table>
+                    <tr>
+                        <td width="60px"><div class="imagem__card"><img src="./img/usuario_cinza.svg" alt="foto do perfil do cliente recente"></div></td>
+                        <td><h4>Naubi Conpert  <span><br>(48) 99999-9999</span></h4></td>   
+                    </tr>
+                    <tr>
+                        <td width="60px"><div class="imagem__card"><img src="./img/usuario_cinza.svg" alt="foto do perfil do cliente recente"></div></td>
+                        <td><h4>Naubi Conpert  <span><br>(48) 99999-9999</span></h4></td>   
+                    </tr>
+                    <tr>
+                        <td width="60px"><div class="imagem__card"><img src="./img/usuario_cinza.svg" alt="foto do perfil do cliente recente"></div></td>
+                        <td><h4>Naubi Conpert  <span><br>(48) 99999-9999</span></h4></td>   
+                    </tr>
+                    <tr>
+                        <td width="60px"><div class="imagem__card"><img src="./img/usuario_cinza.svg" alt="foto do perfil do cliente recente"></div></td>
+                        <td><h4>Naubi Conpert  <span><br>(48) 99999-9999</span></h4></td>   
+                    </tr>
+                    <tr>
+                        <td width="60px"><div class="imagem__card"><img src="./img/usuario_cinza.svg" alt="foto do perfil do cliente recente"></div></td>
+                        <td><h4>Naubi Conpert  <span><br>(48) 99999-9999</span></h4></td>   
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <script>
+        //Alterando o menu lateral
+
+        let alternar = document.querySelector('.alternar');
+        let navegacao = document.querySelector('.navegacao');
+        let menu = document.querySelector('.menu');
+
+        alternar.onclick = function(){
+            navegacao.classList.toggle('Ativo')
+            menu.classList.toggle('Ativo')
+        }
+
+        // Adiciona a classe 'PorCima' nos itens da lista do menu lateral
+        let lista = document.querySelectorAll('.navegacao li');
+        function ativarLink(){
+            lista.forEach((item) =>
+            item.classList.remove('PorCima'));
+            this.classList.add('PorCima');
+        }
+
+        lista.forEach((item) =>
+        item.addEventListener('MousePorCima', ativarLink))
+
+    </script>
+</body>
+</html>
